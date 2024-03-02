@@ -11,11 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
-    <Folder Include="Helpers\" />
-    <Folder Include="ViewModels\" />
-    <Folder Include="wwwroot\css\scss\" />
-    <Folder Include="wwwroot\css\scss\sections\" />
     <Folder Include="wwwroot\images\" />
   </ItemGroup>
 

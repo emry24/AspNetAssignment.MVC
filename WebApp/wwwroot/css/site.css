@@ -446,3 +446,117 @@ form span.field-validation-error {
   font-size: 14px !important;
   color: #EF4444;
 }
+
+#signup {
+  height: 100%;
+}
+#signup .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+@media (min-width: 992px) {
+  #signup .container {
+    width: 60%;
+  }
+}
+@media (min-width: 1200px) {
+  #signup .container {
+    width: 40%;
+  }
+}
+#signup .container form {
+  padding: 1rem;
+}
+#signup .container form .content {
+  display: grid;
+  gap: 1rem 2rem;
+  grid-auto-columns: 1fr;
+  grid-template-areas: "firstname" "lastname" "email" "password" "confirm" "terms" "button";
+}
+@media (min-width: 768px) {
+  #signup .container form .content {
+    grid-auto-columns: 1fr 1fr;
+    grid-template-areas: "firstname lastname" "email email" "password password" "confirm confirm" "terms terms" "button button";
+  }
+}
+#signup .container form .content #form-firstname {
+  grid-area: firstname;
+}
+#signup .container form .content #form-lastname {
+  grid-area: lastname;
+}
+#signup .container form .content #form-email {
+  grid-area: email;
+}
+#signup .container form .content #form-password {
+  grid-area: password;
+}
+#signup .container form .content #form-confirm {
+  grid-area: confirm;
+}
+#signup .container form .content #form-terms {
+  grid-area: terms;
+}
+#signup .container form .content #form-submit {
+  grid-area: button;
+}
+
+#signin {
+  height: 100%;
+}
+#signin .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+@media (min-width: 992px) {
+  #signin .container {
+    width: 60%;
+  }
+}
+@media (min-width: 1200px) {
+  #signin .container {
+    width: 40%;
+  }
+}
+#signin .container form {
+  padding: 1rem;
+}
+#signin .container form .content {
+  display: grid;
+  gap: 1rem 2rem;
+  grid-auto-columns: 1fr;
+  grid-template-areas: "email" "password" "remember" "button" "forgot" "hr" "external";
+}
+#signin .container form .content #form-email {
+  grid-area: email;
+}
+#signin .container form .content #form-password {
+  grid-area: password;
+}
+#signin .container form .content #form-remember {
+  grid-area: remember;
+  padding: 1rem 0;
+}
+#signin .container form .content #form-submit {
+  grid-area: button;
+}
+#signin .container form .content #form-forgot-password {
+  grid-area: forgot;
+  margin: 1rem 0 0 0;
+  text-align: center;
+}
+#signin .container form .content hr {
+  grid-area: hr;
+}
+#signin .container form .content #external-signin {
+  grid-area: external;
+  display: flex;
+  gap: 1rem;
+}
+#signin .container form .content #external-signin a {
+  flex: 1;
+}
