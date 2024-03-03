@@ -19,8 +19,7 @@ form {
             }
         }
     }
-
-    .checkbox-group {
+    /*    .checkbox-group {
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -36,6 +35,57 @@ form {
             margin: 0;
             font-weight: 400;
         }
+    }*/
+
+    .checkbox-group {
+        position: relative;
+        height: 50px;
+
+        .input.group {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 0.5rem;
+
+            input[type="checkbox"] {
+                height: 1.5rem;
+                width: 1.5rem;
+
+                &.input-validation-error {
+                    position: relative;
+                    box-shadow: 0 0 0 0.036rem $danger;
+                    color: $danger;
+
+                    &::placeholder {
+                        color: $danger;
+                    }
+                }
+            }
+
+            label {
+                margin: 0;
+                font-weight: 400;
+            }
+        }
+
+        span {
+            position: relative;
+
+            &.field-validation-error {
+                @include text-s;
+                color: $danger;
+
+                &::after {
+                    position: absolute;
+                    top: 0;
+                    right: 10px;
+                    z-index: 10;
+                    font-size: 2em;
+                    display: block;
+                    content: '\2BBF';
+                }
+            }
+        }
     }
 
     label {
@@ -46,19 +96,25 @@ form {
     input {
         padding: 1rem;
         border-radius: 0.5rem !important;
-        border: 0.036rem solid $gray-400;
+        border: 0.063rem solid $gray-400;
 
         &::placeholder {
             opacity: 0.4;
         }
 
         &.input-validation-error {
-            border: 0.036rem solid $danger !important;
+            position: relative;
+            border: 0.063rem solid $danger !important;
             color: $danger;
 
             &::placeholder {
                 color: $danger;
             }
+        }
+
+        &:focus {
+            outline: none;
+            border: 0.063rem solid $gray-600;
         }
     }
 
@@ -84,11 +140,21 @@ form {
 
     span {
         &.field-validation-error {
-            position: static;
+            position: absolute;
             top: 0;
             right: 0;
             @include text-s;
             color: $danger;
+
+            &::after {
+                position: absolute;
+                right: 10px;
+                top: 46px;
+                z-index: 10;
+                font-size: 2em;
+                display: block;
+                content: '\2BBF';
+            }
         }
     }
 }
